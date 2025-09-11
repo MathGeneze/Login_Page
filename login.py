@@ -2,24 +2,20 @@
 
 import streamlit as st
 
-st.markdown(
-    """
-    <style>    
-    .stApp {
-        background-image: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzQ0aHlqbjhuZm9hZzEyYm5xb25hcm1hOXc4azd0c3EwdjVmdTR3ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/p6EDJOPtyd0DJSuDef/giphy.gif');
-        background-size: cover;
-        background-repeat: no-repeat;
-    }    
-    </style> 
-    """,
-    unsafe_allow_html=True
-)
+# Abertura do arquivo css para utilizar o fundo animado
+with open("style.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
 
 # st.dialog retorna um pop-up 
 @st.dialog('Alert')
 def login_validation(usr, passw):
-    if usr == '' or passw == '':
-        st.error('**Please enter your username or password.**')
+    if usr == '' and passw == '':
+        st.error('**Please, enter your user and password.**')
+    elif usr == '':
+        st.warning('**Please, enter your user.**')
+    elif passw == '':
+        st.warning('**Please, enter your password.**')
     else:
         st.success('Login successfull.')
 
