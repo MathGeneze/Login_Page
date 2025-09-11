@@ -31,7 +31,7 @@ with st.form('Sign_In'):
     st.divider()
     
     # Nome de Usuário e Senha
-    user = st.text_input('User', placeholder='email@gmail.com')
+    user = st.text_input('User', placeholder='ex: email@gmail.com')
     password = st.text_input('Password', type='password', placeholder='ex: 123456')
     
     # Botão de enviar
