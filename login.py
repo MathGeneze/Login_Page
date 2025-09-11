@@ -60,7 +60,7 @@ with st.form('Sign_In'):
     
     # -- Criando uma conta
     with colunas_extra[2]:
-        create_account = st.html('<p><a href="https://google.com">Create an Account</a></p>')
+        create_account = st.html('<p><a href="https://linkedin.com">Create an Account</a></p>')
         
     # Se o botão for clicado, a função irá verificar infos vazias
     if botao_submit:
