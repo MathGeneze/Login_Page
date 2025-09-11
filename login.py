@@ -27,11 +27,11 @@ def login_validation(usr, passw):
 with st.form('Sign_In'):
     
     st.title('Sign In')
-    st.caption('Please enter your username and password.')
+    st.caption('Please enter your user and password.')
     st.divider()
     
     # Nome de Usuário e Senha
-    username = st.text_input('Username')
+    user = st.text_input('User', placeholder='email@gmail.com')
     password = st.text_input('Password', type='password')
     
     # Botão de enviar
@@ -68,5 +68,5 @@ with st.form('Sign_In'):
         
     # Se o botão for clicado, a função irá verificar infos vazias
     if botao_submit:
-        login_validation(username, password)
+        login_validation(user, password)
 
