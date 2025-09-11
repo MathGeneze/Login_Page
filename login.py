@@ -32,7 +32,7 @@ with st.form('Sign_In'):
     
     # Nome de Usuário e Senha
     user = st.text_input('User', placeholder='email@gmail.com')
-    password = st.text_input('Password', type='password')
+    password = st.text_input('Password', type='password', placeholder='ex: 123456')
     
     # Botão de enviar
     botao_submit = st.form_submit_button('Submit', type='primary', use_container_width=True)
