@@ -1,5 +1,3 @@
-# Simulador de uma login page
-
 import streamlit as st
 
 # Abertura do arquivo css para utilizar o fundo animado
@@ -51,18 +49,16 @@ with st.form('Sign_In'):
     
     # -- Checkbox para relembrar os dados do usuário
     with colunas_extra[0]:
-        remember_me = st.checkbox('Remember me')
+        remember_me = st.checkbox('Remember me', width='stretch')
         
     # -- Link para aba Forgot Password
     with colunas_extra[1]:
+        st.page_link(page='pages/password.py', label='Forgot Password', width='stretch')
     
-        forgot_password = st.html('<p><a href="https://google.com">Forgot Password</a></p>')
-    
-    # -- Criando uma conta
+    # -- Redireciona para a página de registro de conta
     with colunas_extra[2]:
-        create_account = st.html('<p><a href="https://linkedin.com">Create an Account</a></p>')
+        st.page_link(page='pages/registro.py', label='Create an Account', width='stretch')
         
     # Se o botão for clicado, a função irá verificar infos vazias
     if botao_submit:
         login_validation(user, password)
-
