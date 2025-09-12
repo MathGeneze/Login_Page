@@ -5,6 +5,7 @@ pg = st.navigation([
     # Página de login
     st.Page('pages/login.py', title='Login', url_path='Login do Usuário', icon=':material/login:'),
     
+    
     # Página de criação de conta
     st.Page('pages/registro.py', title='Criando uma conta', url_path='create_account', icon=':material/account_circle:'),
     
