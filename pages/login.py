@@ -1,9 +1,9 @@
 import streamlit as st
 
 # Abertura do arquivo css para utilizar o fundo animado
-with open("style.css") as f:
-    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
+with open("styles/style_1.css") as fundo:
+    st.markdown(f"<style>{fundo.read()}</style>",unsafe_allow_html=True)
+ 
 
 # st.dialog retorna um pop-up 
 @st.dialog('Alert')
