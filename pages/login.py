@@ -31,10 +31,10 @@ with st.form('Sign_In'):
     # Botão de enviar
     botao_submit = st.form_submit_button('Submit', type='primary', use_container_width=True)
     
-    colunas_botao = st.columns(2)
-    
     
     # -- Botão de conectar com o Google
+    colunas_botao = st.columns(2)
+    
     with colunas_botao[0]:
     
         botao_google = st.form_submit_button('Connect with Google', type='secondary', icon=':material/mail:', use_container_width=True,)

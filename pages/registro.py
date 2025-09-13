@@ -6,4 +6,9 @@ with open('styles/style_2.css') as fundo:
         unsafe_allow_html=True)
 
 
-st.title('Registro de conta')
+st.title('Cadastro de clientes')
+
+nome = st.text_input('Nome', placeholder='João da Silva')
+email = st.text_input('Email', placeholder='joão.silva@gmail.com')
+senha = st.text_input('Senha', placeholder='123456789', type='password')
+telefone = st.text_input('Telefone', placeholder='55 12345 6789')
